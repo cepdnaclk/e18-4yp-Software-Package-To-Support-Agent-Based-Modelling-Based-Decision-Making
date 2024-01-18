@@ -1,5 +1,5 @@
 ___
-# DELETE THIS INSTRUCTIONS AND ADD A SHORT INTRODUCTION ABOUT YOUR PROJECT
+# Software Package To Support Agent Based Modelling Based Decision Making
 ___
 
 ## Please refer the instructions in below URL:
