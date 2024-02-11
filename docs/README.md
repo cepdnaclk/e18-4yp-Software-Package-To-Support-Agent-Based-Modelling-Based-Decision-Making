@@ -31,7 +31,7 @@ title:
 5. [Experiment Setup and Implementation](#experiment-setup-and-implementation)
 6. [Results and Analysis](#results-and-analysis)
 7. [Conclusion](#conclusion)
-8. [Publications](#publications)\
+8. [Publications](#publications)
 9. [Links](#links)
 
 ---
