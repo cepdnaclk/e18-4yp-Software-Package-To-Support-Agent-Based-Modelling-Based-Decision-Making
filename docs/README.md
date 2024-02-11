@@ -30,13 +30,13 @@ Agent-based modeling (ABM) is a powerful tool for studying complex systems and d
 
 2. [Introduction](#introduction)
 
-   Agent-Based Modeling (ABM) stands as a powerful methodology for comprehending the intricacies of complex systems and decision-making processes. ABMs simulate how individual entities, or agents, interact and behave in a given environment, offering valuable insights for informed decision-making. However, the effectiveness of ABMs relies on how accurately the environment is represented. Mesa Python framework, historically limited to two-dimensional (2D) spaces, faces challenges in handling the complexities of three-dimensional (3D) scenarios.
+Agent-Based Modeling (ABM) stands as a powerful methodology for comprehending the intricacies of complex systems and decision-making processes. ABMs simulate how individual entities, or agents, interact and behave in a given environment, offering valuable insights for informed decision-making. However, the effectiveness of ABMs relies on how accurately the environment is represented. Mesa Python framework, historically limited to two-dimensional (2D) spaces, faces challenges in handling the complexities of three-dimensional (3D) scenarios.
 
 This research aims to overcome Mesa's 2D limitations by proposing a significant upgrade for spatial simulations in 3D environments, with a particular emphasis on the implementation of Triangular Mesh. Despite Mesa's essential role in ABM, contributing significantly to simulation studies[1], its inherent lack of native 3D support poses constraints in scenarios requiring detailed 3D representation.
 
 The motivation for this upgrade stems from a recognized gap in the existing literature, highlighted by Patel's influential work in 2019 [2]. Patel emphasizes the need to expand Mesa's class structure to include (x, y, z) positions for agents, addressing the current limitation of Mesa's HexGrid grid, which only accommodates (x, y) positions. This extension proves crucial for achieving more realistic simulations, introducing a 3D-like modeling grid.
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+<p><img src="images/table1.png" width="700" /></p>
 
 4. [Related works](#related-works)
 
