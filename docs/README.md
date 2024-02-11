@@ -76,14 +76,18 @@ The literature review delves into four key papers on Agent-Based Modeling (ABM) 
 
 Reference [6] survey presents a comprehensive list of ABM tools, offering a broad overview without direct comparison but serving as a valuable resource for understanding the diverse landscape. Researchers can extract a wealth of information regarding the range of available ABM tools, expanding their awareness of potential options. Refernce [7] conduct a thorough review, evaluating ABM tools on multiple criteria, providing a comprehensive understanding for decision-makers with diverse research requirements. This enables decision-makers to consider various aspects, such as language, model scalability, and development effort, when selecting tools aligned with their specific needs. Together, these papers contribute to a holistic understanding of ABM tools, covering features, user experience, programming, and overall suitability for varied applications, guiding researchers in selecting tools aligned with their specific needs. The Table2 gives an over all idea of the tools and the criteria used to make comparative analysis in those 4 papers.
 
-## Methodology
+<!--## Methodology
 
 ## Experiment Setup and Implementation
 
-## Results and Analysis
+## Results and Analysis-->
 
 ## Conclusion
+In conclusion, this research significantly advances Agent-Based Modeling (ABM) by proposing a transformative extension to the Mesa Python framework, aiming to overcome its 2D limitations. Through the integration of Triangular Meshes, our study enhances Mesa's spatial simulation capabilities, addressing the crucial need for accurate representation of complex surfaces and terrains in decision-making scenarios. The carefully considered choice of Mesa as the preferred ABM framework, based on its use of Python and non-proprietary nature, aligns with the current trends in the scientific community, ensuring a user-friendly and adaptable environment.
 
+The proposed software package resulting from this research holds great promise for decision-makers using ABM, offering an advanced representation of spatial dynamics applicable across diverse fields. By presenting a meticulous methodology, case study validations, and performance evaluations, this research establishes a robust foundation for upgrading Mesa and introduces 3D support through Triangular Meshes. Ultimately, this work contributes significantly to the broader landscape of computational modeling and decision-making, fostering advancements in spatial simulations within the realm of ABM.
+
+<!--
 ## Publications
 [//]: # "Note: Uncomment each once you uploaded the files to the repository"
 
@@ -92,7 +96,7 @@ Reference [6] survey presents a comprehensive list of ABM tools, offering a broa
 <!-- 3. [Semester 8 report](./) -->
 <!-- 4. [Semester 8 slides](./) -->
 <!-- 5. Author 1, Author 2 and Author 3 "Research paper title" (2021). [PDF](./). -->
-
+-->
 ## Links
 
 [//]: # ( NOTE: EDIT THIS LINKS WITH YOUR REPO DETAILS )
