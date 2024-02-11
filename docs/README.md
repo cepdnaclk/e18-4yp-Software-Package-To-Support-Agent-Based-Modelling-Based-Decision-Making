@@ -89,11 +89,17 @@ The proposed software package resulting from this research holds great promise f
 
 ## Reference
 [1] D. Masad and J. Kazil, “Mesa: An Agent-Based Modeling Framework,” 2015. Available: https://conference.scipy.org/proceedings/scipy2015/pdfs/jacqueline-kazil.pdf
+
 [2] J. Kazil, D. Masad, and A. Crooks, “Utilizing Python for Agent-Based Modeling: The Mesa Framework,” Lecture Notes in Computer Science, pp. 308–317, Jan. 2020, doi: https://doi.org/10.1007/978-3-030-61255-9-30.
+
 [3] “Applications of Agent-Based Models in Cancer Research and Epidemiological Simulations,” Research Explorer The University of Manchester. https://research.manchester.ac.uk/en/studentTheses/applications-of-agent-based-models-in-cancer-research-and-epidemi (accessed Feb. 09, 2024).
+
 [4] A. Antelmi, G. Cordasco, G. D’Ambrosio, D. De Vinco, and C. Spagnuolo, “Experimenting with Agent-Based Model Simulation Tools,” Applied Sciences, vol. 13, no. 1, p. 13, Dec. 2022, doi: https://doi.org/10.3390/app13010013.
+
 [5] S. F. Railsback, S. L. Lytinen, and S. K. Jackson, “Agent-based Simulation Platforms: Review and Development Recommendations,” SIMULATION, vol. 82, no. 9, pp. 609–623, Sep. 2006, doi: https://doi.org/10.1177/0037549706073695.
+
 [6] Allan, R.J.. (2009). Survey of Agent Based Modelling and Simulation Tools.
+
 [7] S. Abar, G. K. Theodoropoulos, P. Lemarinier, and G. M. P. O’Hare, “Agent Based Modelling and Simulation tools: A review of the state-of-art software,” Computer Science Review, vol. 24, pp. 13–33, May 2017, doi: https://doi.org/10.1016/j.cosrev.2017.03.001.
 
 <!--
