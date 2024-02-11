@@ -53,7 +53,7 @@ This research aims to overcome Mesa's 2D limitations by proposing a significant 
 
 The motivation for this upgrade stems from a recognized gap in the existing literature, highlighted by Patel's influential work in 2019 [2]. Patel emphasizes the need to expand Mesa's class structure to include (x, y, z) positions for agents, addressing the current limitation of Mesa's HexGrid grid, which only accommodates (x, y) positions. This extension proves crucial for achieving more realistic simulations, introducing a 3D-like modeling grid.
 
-<img src="[docs/images/table1.png](https://github.com/cepdnaclk/e18-4yp-Software-Package-To-Support-Agent-Based-Modelling-Based-Decision-Making/blob/main/docs/images/table1.PNG)"/>
+<img src="https://github.com/cepdnaclk/e18-4yp-Software-Package-To-Support-Agent-Based-Modelling-Based-Decision-Making/blob/main/docs/images/table1.PNG"/>
 
 According to the insights derived from the comparative table based on [3][4], our choice of Mesa as the preferred Agent-Based Modeling (ABM) framework is underpinned by careful considerations. Table1 compares various ABM tools based on factors like proprietary languages, non-proprietary languages, and 3D visualization capabilities, serves as a valuable guide in understanding the strengths of different frameworks.
 
