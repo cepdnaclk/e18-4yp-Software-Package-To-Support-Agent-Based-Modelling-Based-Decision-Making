@@ -53,8 +53,7 @@ This research aims to overcome Mesa's 2D limitations by proposing a significant 
 
 The motivation for this upgrade stems from a recognized gap in the existing literature, highlighted by Patel's influential work in 2019 [2]. Patel emphasizes the need to expand Mesa's class structure to include (x, y, z) positions for agents, addressing the current limitation of Mesa's HexGrid grid, which only accommodates (x, y) positions. This extension proves crucial for achieving more realistic simulations, introducing a 3D-like modeling grid.
 
-<p><img src="images/table1.png" width="700" /></p>
-![Table 1](./images/table1.png)
+<img src="docs/images/table1.png"/>
 
 ## Related works
 
