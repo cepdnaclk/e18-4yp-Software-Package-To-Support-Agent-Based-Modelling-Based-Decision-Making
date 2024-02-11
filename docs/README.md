@@ -86,7 +86,6 @@ This is a sample image, to show how to add images to your page. To learn more op
 <!-- 4. [Semester 8 slides](./) -->
 <!-- 5. Author 1, Author 2 and Author 3 "Research paper title" (2021). [PDF](./). -->
 
-
 ## Links
 
 [//]: # ( NOTE: EDIT THIS LINKS WITH YOUR REPO DETAILS )
