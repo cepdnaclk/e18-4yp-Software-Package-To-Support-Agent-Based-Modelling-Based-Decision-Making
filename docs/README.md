@@ -87,6 +87,15 @@ In conclusion, this research significantly advances Agent-Based Modeling (ABM) b
 
 The proposed software package resulting from this research holds great promise for decision-makers using ABM, offering an advanced representation of spatial dynamics applicable across diverse fields. By presenting a meticulous methodology, case study validations, and performance evaluations, this research establishes a robust foundation for upgrading Mesa and introduces 3D support through Triangular Meshes. Ultimately, this work contributes significantly to the broader landscape of computational modeling and decision-making, fostering advancements in spatial simulations within the realm of ABM.
 
+## Reference
+[1] D. Masad and J. Kazil, “Mesa: An Agent-Based Modeling Framework,” 2015. Available: https://conference.scipy.org/proceedings/scipy2015/pdfs/jacqueline-kazil.pdf
+[2] J. Kazil, D. Masad, and A. Crooks, “Utilizing Python for Agent-Based Modeling: The Mesa Framework,” Lecture Notes in Computer Science, pp. 308–317, Jan. 2020, doi: https://doi.org/10.1007/978-3-030-61255-9-30.
+[3] “Applications of Agent-Based Models in Cancer Research and Epidemiological Simulations,” Research Explorer The University of Manchester. https://research.manchester.ac.uk/en/studentTheses/applications-of-agent-based-models-in-cancer-research-and-epidemi (accessed Feb. 09, 2024).
+[4] A. Antelmi, G. Cordasco, G. D’Ambrosio, D. De Vinco, and C. Spagnuolo, “Experimenting with Agent-Based Model Simulation Tools,” Applied Sciences, vol. 13, no. 1, p. 13, Dec. 2022, doi: https://doi.org/10.3390/app13010013.
+[5] S. F. Railsback, S. L. Lytinen, and S. K. Jackson, “Agent-based Simulation Platforms: Review and Development Recommendations,” SIMULATION, vol. 82, no. 9, pp. 609–623, Sep. 2006, doi: https://doi.org/10.1177/0037549706073695.
+[6] Allan, R.J.. (2009). Survey of Agent Based Modelling and Simulation Tools.
+[7] S. Abar, G. K. Theodoropoulos, P. Lemarinier, and G. M. P. O’Hare, “Agent Based Modelling and Simulation tools: A review of the state-of-art software,” Computer Science Review, vol. 24, pp. 13–33, May 2017, doi: https://doi.org/10.1016/j.cosrev.2017.03.001.
+
 <!--
 ## Publications
 [//]: # "Note: Uncomment each once you uploaded the files to the repository"
@@ -96,7 +105,6 @@ The proposed software package resulting from this research holds great promise f
 <!-- 3. [Semester 8 report](./) -->
 <!-- 4. [Semester 8 slides](./) -->
 <!-- 5. Author 1, Author 2 and Author 3 "Research paper title" (2021). [PDF](./). -->
--->
 ## Links
 
 [//]: # ( NOTE: EDIT THIS LINKS WITH YOUR REPO DETAILS )
