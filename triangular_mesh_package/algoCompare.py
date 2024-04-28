@@ -71,6 +71,7 @@ def flip_algorithm_triangulation(vertices):
 
 def compare_execution_time():
     xyz = readFace('face.vert')
+    num_nodes = len(xyz)
     
     # Measure time for Delaunay triangulation
     delaunay_time = timeit.timeit(
@@ -84,6 +85,7 @@ def compare_execution_time():
         number=1
     )
 
+    print("Number of nodes (vertices):", num_nodes)
     print("Execution time for Delaunay triangulation:", delaunay_time, "seconds")
     print("Execution time for Flip algorithm triangulation:", flip_algorithm_time, "seconds")
 
