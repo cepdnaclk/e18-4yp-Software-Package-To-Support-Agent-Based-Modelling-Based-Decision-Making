@@ -72,13 +72,13 @@ In conclusion, our research aims to elevate the Mesa Python framework, both meta
 ## Delaunay Triangulation
 The Delaunay mesh-building process optimizes the connections between a set of data points based on the "Delaunay criterion," which evaluates and adjusts the geometric configuration of triangles. This process continues until all triangles meet the criterion, resulting in a mesh with superior spatial representation and optimal properties. An illustration demonstrates the improvement from arbitrary connections to a Delaunay-conformant mesh.
 
-<img src="images/delaunay1.png"/>
+<img src="images/delaunay1.png" width="500"/>
 To many people, the arrangement on the right appears more pleasing than the one on the left. The image on the right is an example of a Delaunay Triangulation.
 
 <table>
   <tr>
     <td>
-      <img src="images/sample.png" alt="Image description" width="200"/>
+      <img src="images/criterian.png" alt="Image description" width="500"/>
     </td>
     <td>
       Delaunay Criterion
