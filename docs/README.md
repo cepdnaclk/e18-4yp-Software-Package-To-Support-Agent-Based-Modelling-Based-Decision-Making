@@ -58,11 +58,13 @@ The paper outlines the methodology for upgrading Mesa, including integration str
 In conclusion, this research aims to elevate the Mesa Python framework by introducing 3D support through Triangular Meshes. This enhancement is expected to substantially improve the realism and accuracy of spatial simulations within ABM, significantly contributing to computational modeling and decision-making.
 
 ## 3D Visualization
-Agent-Based Modeling (ABM) using Mesa has traditionally been confined to two-dimensional (2D) spaces, restricting the ability to accurately simulate and visualize complex environments. Figure 1 illustrates a typical 2D representation of a mesh, which simplifies spatial relationships and fails to capture the vertical dimension crucial for many real-world applications.
+Agent-Based Modeling (ABM) using Mesa has traditionally been confined to two-dimensional (2D) spaces, restricting the ability to accurately simulate and visualize complex environments. Figure 2D illustrates a typical 2D representation of a mesh, which simplifies spatial relationships and fails to capture the vertical dimension crucial for many real-world applications.
 
-<img src="images/criterian.png" alt="Image description" width="500"/>
-
-The shift towards three-dimensional (3D) representation is essential for modeling and understanding environments where vertical spatial relationships significantly impact agent interactions and decision-making processes. Figure 2 depicts a 3D representation of a mesh, highlighting the added dimension that provides a more realistic and comprehensive view of the environment.
+<div style="display: flex; justify-content: space-between;">
+  <img src="images/2d.png" alt="2D Image" style="height: 300px; width: auto;">
+  <img src="images/3d.png" alt="3D Image" style="height: 300px; width: auto;">
+</div>
+The shift towards three-dimensional (3D) representation is essential for modeling and understanding environments where vertical spatial relationships significantly impact agent interactions and decision-making processes. Figure 3D depicts a 3D representation of a mesh, highlighting the added dimension that provides a more realistic and comprehensive view of the environment.
 
 we propose an advanced triangular mesh solution aimed at enhancing the 3D visualization of irregular surfaces within the Mesa agent-based modeling framework. This solution leverages the Delaunay triangulation algorithm, chosen for its superior ability to optimally represent irregular surfaces compared to other methods.
 
