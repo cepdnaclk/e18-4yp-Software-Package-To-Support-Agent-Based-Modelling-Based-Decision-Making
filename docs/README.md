@@ -75,6 +75,24 @@ The Delaunay mesh-building process optimizes the connections between a set of da
 <img src="images/delaunay1.png"/>
 To many people, the arrangement on the right appears more pleasing than the one on the left. The image on the right is an example of a Delaunay Triangulation.
 
+<table>
+  <tr>
+    <td>
+      <img src="images/sample.png" alt="Image description" width="200"/>
+    </td>
+    <td>
+      Delaunay Criterion
+      <ul>
+      <li>All triangles are non-degenerate.</li>
+      <li>The circumcircle of each triangle doesn't contain any other vertices from the mesh except its defining vertices.</li>
+      <li>Maintains mesh quality and optimality.</li>
+    </ul>
+    </td>
+  </tr>
+</table>
+
+
+
 <!--## Methodology
 
 ## Experiment Setup and Implementation
