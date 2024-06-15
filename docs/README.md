@@ -69,12 +69,11 @@ This paper outlines our approach to upgrading Mesa, emphasizing the exploration 
 
 In conclusion, our research aims to elevate the Mesa Python framework, both metaphorically and literally, by introducing 3D support through the integration of Triangular Meshes. This enhancement, especially the implementation of Triangular Mesh, is poised to substantially improve the realism and accuracy of spatial simulations within ABM, contributing significantly to the broader landscape of computational modeling and decision-making.
 
-## Related works
-The literature review delves into four key papers on Agent-Based Modeling (ABM) tools, each offering unique insights. Reference [4] extensively compare various ABM tools, assessing features such as Available Features, Ease of Use, and Performance, aiding researchers in tool selection. From this, researchers can glean an understanding of the strengths and weaknesses of individual tools, facilitating an informed decision-making process. Reference [5] focus on MASON, Swarm, Repast, and NetLogo, emphasizing Programming Experience and Execution Speed, providing valuable practical and performance considerations. This offers insights into the user experience and computational efficiency, guiding researchers on the practical aspects of working with different ABM tools. 
+## Delaunay Triangulation
+The Delaunay mesh-building process optimizes the connections between a set of data points based on the "Delaunay criterion," which evaluates and adjusts the geometric configuration of triangles. This process continues until all triangles meet the criterion, resulting in a mesh with superior spatial representation and optimal properties. An illustration demonstrates the improvement from arbitrary connections to a Delaunay-conformant mesh.
 
-<img src="images/table2.PNG"/>
-
-Reference [6] survey presents a comprehensive list of ABM tools, offering a broad overview without direct comparison but serving as a valuable resource for understanding the diverse landscape. Researchers can extract a wealth of information regarding the range of available ABM tools, expanding their awareness of potential options. Refernce [7] conduct a thorough review, evaluating ABM tools on multiple criteria, providing a comprehensive understanding for decision-makers with diverse research requirements. This enables decision-makers to consider various aspects, such as language, model scalability, and development effort, when selecting tools aligned with their specific needs. Together, these papers contribute to a holistic understanding of ABM tools, covering features, user experience, programming, and overall suitability for varied applications, guiding researchers in selecting tools aligned with their specific needs. The Table2 gives an over all idea of the tools and the criteria used to make comparative analysis in those 4 papers.
+<img src="images/table1.PNG"/>
+To many people, the arrangement on the right appears more pleasing than the one on the left. The image on the right is an example of a Delaunay Triangulation.
 
 <!--## Methodology
 
