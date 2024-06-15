@@ -47,6 +47,8 @@ Agent-Based Modeling (ABM) stands as a powerful methodology for understanding co
 
 This research addresses Mesa's 2D limitations by proposing an upgrade to support spatial simulations in 3D environments, specifically through triangular mesh visualization. The Delaunay triangulation algorithm is leveraged to construct high-quality triangular meshes that accurately represent irregular surfaces, facilitating real-time visualizations. This enhancement is particularly valuable in fields such as geography, urban planning, and environmental science, where understanding spatial relationships is crucial.
 
+<img src="images/trianguler.png" alt="Image description" width="1000"/>
+
 The motivation for this upgrade stems from a gap in existing literature, notably highlighted by Patel's 2019 work, which emphasizes the need to expand Mesa's class structure to include (x, y, z) positions for agents. This extension is essential for more realistic simulations, moving beyond Mesa's current HexGrid, which only accommodates (x, y) positions.
 
 Informed by a comparative analysis of various ABM tools, Mesa was chosen for this upgrade due to its use of Python—a widely adopted, user-friendly programming language favored within the scientific community. Python's extensive libraries for data processing and analysis further enhance its suitability for scientific research and modeling. Mesa's non-proprietary nature and compatibility with Python's ecosystem make it a flexible and adaptable framework compared to other ABM tools that use proprietary languages or lack such flexibility.
