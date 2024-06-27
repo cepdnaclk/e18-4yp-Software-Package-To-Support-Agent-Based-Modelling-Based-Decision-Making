@@ -123,11 +123,11 @@ class MeshModel(Model):
 # Running the Model
 if __name__ == "__main__":
     # Define the number of agents and steps
-    num_agents = 20
-    steps = 10
+    num_agents = 1000
+    steps = 100
 
     # Load the vertex data file (replace 'face.vert' with the actual path to your file)
-    vertex_file = "C:\\Users\\jfaar\\Downloads\\terrain.vert"
+    vertex_file = ".\\data\\moon_surface_coordinates.txt"
 
     # Create the model and run the simulation
     model = MeshModel(num_agents, vertex_file)
