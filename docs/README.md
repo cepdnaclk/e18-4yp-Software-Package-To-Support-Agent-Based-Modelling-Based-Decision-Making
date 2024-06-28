@@ -42,39 +42,70 @@ This is a sample image, to show how to add images to your page. To learn more op
 ![Sample Image](./images/sample.png) 
 -->
 
-
-## Abstract
-Agent-based modeling (ABM) is a powerful tool for studying complex systems and decision-making processes. This research contributes to the advancement of Agent-Based Modeling by proposing a transformative extension to the Mesa Python framework, specifically designed to enhance decision-making in ABM environments. Acknowledging the framework's current limitation of not supporting three-dimensional (3D) environments, our study focuses on smoothly integrating Triangular Meshes into Mesa. This integration aims to boost the framework's spatial simulation capabilities, which are essential for accurately representing complex surfaces and terrains in decision-making scenarios. Our objectives include exploring integration strategies, validating through case studies, implementing Triangular Mesh integration, evaluating performance, and extending the solution for scalability and generalization. The proposed software package targets decision-makers using ABM, providing an enhanced representation of spatial dynamics applicable in environmental simulations, structural engineering, and astronomy. Subsequent sections offer a thorough overview of our methodology, results, and implications, illustrating our efforts to empower the Mesa Python framework for more effective decision support in Agent-Based Modeling.
-
 ## Introduction
-Agent-Based Modeling (ABM) stands as a powerful methodology for comprehending the intricacies of complex systems and decision-making processes. ABMs simulate how individual entities, or agents, interact and behave in a given environment, offering valuable insights for informed decision-making. However, the effectiveness of ABMs relies on how accurately the environment is represented. Mesa Python framework, historically limited to two-dimensional (2D) spaces, faces challenges in handling the complexities of three-dimensional (3D) scenarios.
+Agent-Based Modeling (ABM) stands as a powerful methodology for understanding complex systems and decision-making processes by simulating interactions and behaviors of individual entities, or agents, in a given environment. While the Mesa Python framework plays a significant role in ABM, its limitation to two-dimensional (2D) spaces restricts its applicability in scenarios requiring detailed three-dimensional (3D) representation.
 
-This research aims to overcome Mesa's 2D limitations by proposing a significant upgrade for spatial simulations in 3D environments, with a particular emphasis on the implementation of Triangular Mesh. Despite Mesa's essential role in ABM, contributing significantly to simulation studies[1], its inherent lack of native 3D support poses constraints in scenarios requiring detailed 3D representation.
+This research addresses Mesa's 2D limitations by proposing an upgrade to support spatial simulations in 3D environments, specifically through triangular mesh visualization. The Delaunay triangulation algorithm is leveraged to construct high-quality triangular meshes that accurately represent irregular surfaces, facilitating real-time visualizations. This enhancement is particularly valuable in fields such as geography, urban planning, and environmental science, where understanding spatial relationships is crucial.
 
-The motivation for this upgrade stems from a recognized gap in the existing literature, highlighted by Patel's influential work in 2019 [2]. Patel emphasizes the need to expand Mesa's class structure to include (x, y, z) positions for agents, addressing the current limitation of Mesa's HexGrid grid, which only accommodates (x, y) positions. This extension proves crucial for achieving more realistic simulations, introducing a 3D-like modeling grid.
+<img src="images/trianguler.png" alt="Image description" width="1000"/>
 
-<img src="images/table1.PNG"/>
+The motivation for this upgrade stems from a gap in existing literature, notably highlighted by Patel's 2019 work, which emphasizes the need to expand Mesa's class structure to include (x, y, z) positions for agents. This extension is essential for more realistic simulations, moving beyond Mesa's current HexGrid, which only accommodates (x, y) positions.
 
-According to the insights derived from the comparative table based on [3][4], our choice of Mesa as the preferred Agent-Based Modeling (ABM) framework is underpinned by careful considerations. Table1 compares various ABM tools based on factors like proprietary languages, non-proprietary languages, and 3D visualization capabilities, serves as a valuable guide in understanding the strengths of different frameworks.
+Informed by a comparative analysis of various ABM tools, Mesa was chosen for this upgrade due to its use of Python—a widely adopted, user-friendly programming language favored within the scientific community. Python's extensive libraries for data processing and analysis further enhance its suitability for scientific research and modeling. Mesa's non-proprietary nature and compatibility with Python's ecosystem make it a flexible and adaptable framework compared to other ABM tools that use proprietary languages or lack such flexibility.
 
-Informed by this comparison, we specifically opted for Mesa due to several key factors. Notably, Mesa stands out for utilizing the Python language, a widely adopted and user-friendly programming language within the scientific community. Python's popularity is not only attributed to its ease of use but also to its extensive libraries that facilitate data processing and analysis, making it a favored choice for scientific research and modeling.
+The core of this research is the implementation of Triangular Mesh within Mesa, enhancing its spatial simulation capabilities. Triangular Meshes provide a detailed and accurate representation of environments, capturing irregularities essential for precision in environmental simulations, structural engineering, and astronomy.
 
-Additionally, Mesa's compatibility with Python aligns with the growing trend in the scientific community, where Python has become the language of choice. The gentle learning curve and the availability of a rich ecosystem of data analysis and visualization tools in Python make it an attractive option for researchers and developers. This aligns with our goal of creating a user-friendly and accessible ABM framework that caters to the diverse needs of decision-makers.
+The paper outlines the methodology for upgrading Mesa, including integration strategies, validation through case studies, implementation of Triangular Mesh, performance evaluation, and considerations for scalability and generalization. The enhanced Mesa framework aims to meet the diverse needs of decision-makers using ABM, offering advanced representation of spatial dynamics applicable across various fields.
 
-Furthermore, the table reflects that Mesa, despite its 2D limitation, outshines other frameworks in terms of its language choice and non-proprietary nature. While other frameworks might utilize proprietary languages or lack the flexibility to import a variety of toolkits and libraries, Mesa's use of Python ensures a more open and adaptable environment.
+In conclusion, this research aims to elevate the Mesa Python framework by introducing 3D support through Triangular Meshes. This enhancement is expected to substantially improve the realism and accuracy of spatial simulations within ABM, significantly contributing to computational modeling and decision-making.
 
-The heart of our research lies in the implementation of Triangular Mesh within Mesa. Triangular Meshes offer a sophisticated solution for representing complex surfaces and terrains in 3D. This implementation enhances Mesa's spatial simulation capabilities, providing a detailed and accurate representation of the environment. Triangular Meshes excel in capturing irregularities, making them indispensable for scenarios where precision matters, such as environmental simulations, structural engineering, and astronomy.
+## 3D Visualization
+Agent-Based Modeling (ABM) using Mesa has traditionally been confined to two-dimensional (2D) spaces, restricting the ability to accurately simulate and visualize complex environments. Figure 2D illustrates a typical 2D representation of a mesh, which simplifies spatial relationships and fails to capture the vertical dimension crucial for many real-world applications.
 
-This paper outlines our approach to upgrading Mesa, emphasizing the exploration of integration strategies, validation through case studies, the pivotal implementation of Triangular Mesh, performance metric evaluation, and considerations for scalability and generalization. The envisaged software package aims to meet the diverse needs of decision-makers using ABM, offering an advanced representation of spatial dynamics applicable in various fields such as environmental simulations, structural engineering, and astronomy. Subsequent sections delve into the intricacies of our methodology, present results, and illuminate the implications of our efforts, showcasing the potential for more effective decision support in Agent-Based Modeling.
+<div style="display: flex; justify-content: space-between;">
+  <img src="images/2d.png" alt="2D Image" style="height: 300px; width: auto;">
+  <img src="images/3d.png" alt="3D Image" style="height: 300px; width: auto;">
+</div>
+The shift towards three-dimensional (3D) representation is essential for modeling and understanding environments where vertical spatial relationships significantly impact agent interactions and decision-making processes. Figure 3D depicts a 3D representation of a mesh, highlighting the added dimension that provides a more realistic and comprehensive view of the environment.
 
-In conclusion, our research aims to elevate the Mesa Python framework, both metaphorically and literally, by introducing 3D support through the integration of Triangular Meshes. This enhancement, especially the implementation of Triangular Mesh, is poised to substantially improve the realism and accuracy of spatial simulations within ABM, contributing significantly to the broader landscape of computational modeling and decision-making.
+we propose an advanced triangular mesh solution aimed at enhancing the 3D visualization of irregular surfaces within the Mesa agent-based modeling framework. This solution leverages the Delaunay triangulation algorithm, chosen for its superior ability to optimally represent irregular surfaces compared to other methods.
 
-## Related works
-The literature review delves into four key papers on Agent-Based Modeling (ABM) tools, each offering unique insights. Reference [4] extensively compare various ABM tools, assessing features such as Available Features, Ease of Use, and Performance, aiding researchers in tool selection. From this, researchers can glean an understanding of the strengths and weaknesses of individual tools, facilitating an informed decision-making process. Reference [5] focus on MASON, Swarm, Repast, and NetLogo, emphasizing Programming Experience and Execution Speed, providing valuable practical and performance considerations. This offers insights into the user experience and computational efficiency, guiding researchers on the practical aspects of working with different ABM tools. 
+### Why Triangular Mesh?
+The triangular mesh approach is widely recognized for its efficiency and accuracy in depicting complex and irregular surfaces. Triangles, being the simplest polygon, allow for flexible and precise modeling of surface geometry, making them particularly suitable for rendering detailed 3D structures. This method ensures that the resulting mesh is both geometrically accurate and computationally efficient, facilitating real-time visualization and interaction.
 
-<img src="images/table2.PNG"/>
+### Delaunay Triangulation Algorithm
+To develop the triangular mesh, we utilize the Delaunay triangulation algorithm. This algorithm is preferred because it constructs a mesh that maximizes the minimum angle of all the angles of the triangles in the triangulation, avoiding skinny triangles. This property, known as the Delaunay criterion, ensures a high-quality mesh by maintaining:
+<table>
+  <tr>
+    <td>
+      <img src="images/criterian.png" alt="Image description" width="500"/>
+    </td>
+    <td>
+      Delaunay Criterion
+      <ul>
+      <li>All triangles have non-zero area, preventing degenerate cases where triangles collapse into lines or points.</li>
+      <li>The circumcircle (circle passing through all three vertices) of each triangle does not contain any other vertices of the mesh, ensuring optimal vertex connectivity and mesh stability.</li>
+      <li>The resulting mesh balances computational efficiency with geometric accuracy, making it suitable for high-fidelity 3D visualizations.</li>
+    </ul>
+    </td>
+  </tr>
+</table>
 
-Reference [6] survey presents a comprehensive list of ABM tools, offering a broad overview without direct comparison but serving as a valuable resource for understanding the diverse landscape. Researchers can extract a wealth of information regarding the range of available ABM tools, expanding their awareness of potential options. Refernce [7] conduct a thorough review, evaluating ABM tools on multiple criteria, providing a comprehensive understanding for decision-makers with diverse research requirements. This enables decision-makers to consider various aspects, such as language, model scalability, and development effort, when selecting tools aligned with their specific needs. Together, these papers contribute to a holistic understanding of ABM tools, covering features, user experience, programming, and overall suitability for varied applications, guiding researchers in selecting tools aligned with their specific needs. The Table2 gives an over all idea of the tools and the criteria used to make comparative analysis in those 4 papers.
+### Integration with Mesa Agent-Based Modeling Framework
+The integration of this triangular mesh solution into the Mesa framework significantly enhances its capabilities for 3D visualization. Mesa, a robust agent-based modeling library in Python, benefits from this addition by enabling detailed and dynamic representations of agent interactions and environmental changes over irregular terrains.
+
+This enhancement facilitates the exploration of complex systems in a more intuitive and visually engaging manner. Researchers and developers can now visualize how agents interact with their environment in three dimensions, gaining deeper insights into spatial dynamics and emergent behaviors.
+
+### Choosing Plotly for Better Visualization
+When evaluating various visualization tools for handling complex 3D data, Plotly emerges as a standout choice due to its robust capabilities and interactive features. Matplotlib, while widely used, often falls short when it comes to interactive zooming functionalities, which are crucial for exploring intricate details within 3D models. This limitation can hinder comprehensive analysis and understanding of complex surfaces and structures.
+
+On the other hand, tools like PyVista, although powerful for certain applications, face challenges in accurately representing curved surfaces using methods like Delaunay triangulation. This can lead to outputs that resemble rigid bodies rather than faithfully depicting the nuanced curvature of real-world surfaces.
+
+Plotly addresses these shortcomings effectively by offering dynamic zooming capabilities that empower users to delve deep into 3D visualizations. This feature is particularly beneficial for examining intricate details and making informed decisions based on precise data exploration. Additionally, Plotly provides flexibility in adjusting visualization parameters, such as step sizes and rendering options, enabling users to fine-tune representations to match specific requirements.
+
+The interactive nature of Plotly's visualizations enhances user engagement and comprehension, allowing for seamless interaction with complex datasets. This capability is crucial in fields where understanding spatial relationships and surface characteristics play a pivotal role in decision-making processes.
+
+In conclusion, Plotly stands out as a comprehensive solution for visualizing 3D data, overcoming the limitations of other tools by offering advanced zooming capabilities, flexibility in representation, and interactive features that support detailed exploration and analysis of complex surfaces and structures. Its intuitive interface and powerful functionalities make it an ideal choice for researchers and professionals seeking to maximize insights from their 3D data visualizations.
 
 <!--## Methodology
 
