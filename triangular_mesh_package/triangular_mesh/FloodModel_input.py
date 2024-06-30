@@ -66,11 +66,18 @@ class MeshSpace:
                     {'args': [[None], {'frame': {'duration': 0, 'redraw': False}, 'mode': 'immediate', 'transition': {'duration': 0}}], 'label': 'Pause', 'method': 'animate'}
                 ],
                 'showactive': False,
-                'type': 'buttons'
+                'type': 'buttons',
+                'x': 0.5,
+                'xanchor': 'left',
+                'y': 1.2,
+                'direction': 'left'
             }],
             sliders=[{
                 'steps': steps,
-                'currentvalue': {'prefix': 'Step: '}
+                'currentvalue': {'prefix': 'Step: '},
+                'x': 0.5,
+                'xanchor': 'center',
+                'y': 1.2
             }],
             height=800,
             width=1200
