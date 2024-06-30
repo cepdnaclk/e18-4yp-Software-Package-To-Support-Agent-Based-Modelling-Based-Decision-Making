@@ -35,7 +35,6 @@ class MeshSpace:
 
         return neighbors
 
-
     @staticmethod
     def plot_agent_movement(vertices, triangles, agent_history):
         mesh = plot_triangular_mesh(vertices, triangles)
@@ -156,13 +155,13 @@ app.layout = html.Div([
     dbc.Row([
         dbc.Col([
             html.Div([
-                html.Label('Upload File:' ,style={'margin-left': '20px'}),
+                html.Label('Upload File:', style={'margin-left': '20px'}),
                 dcc.Upload(
                     id='upload-data',
                     children=html.Div([
                         'Drag and Drop or ',
                         html.A('Select Files')
-                    ], style={'display': 'flex', 'alignItems': 'center', 'margin-left':'10px'}),
+                    ], style={'display': 'flex', 'alignItems': 'center', 'margin-left': '10px'}),
                     style={
                         'width': '100%',  # Adjusted to take full width of the column
                         'height': '30px',
@@ -190,7 +189,7 @@ app.layout = html.Div([
             ], style={'display': 'flex', 'alignItems': 'center', 'margin': '10px'}),
         ], width=3),
         dbc.Col([
-            dbc.Button('Run Simulation', id='run_simulation', n_clicks=0, color='primary', className='ms-3',  style={'margin': '10px'}),
+            dbc.Button('Run Simulation', id='run_simulation', n_clicks=0, color='primary', className='ms-3', style={'margin': '10px'}),
         ], width=2),
     ]),
     dbc.Row([
@@ -215,25 +214,32 @@ def parse_contents(contents):
         return None
 
 @app.callback(
-    [Output('simulation_graph', 'figure'),
-     Output('upload-data', 'children')],
-    [Input('run_simulation', 'n_clicks')],
-    [State('num_agents', 'value'),
-     State('num_steps', 'value'),
-     State('upload-data', 'contents'),
-     State('upload-data', 'filename')]
+    Output('upload-data', 'children'),
+    Input('upload-data', 'filename')
 )
-def update_simulation(n_clicks, num_agents, num_steps, contents, filename):
+def update_filename(filename):
+    if filename is None:
+        return html.Div([
+            'Drag and Drop or ',
+            html.A('Select Files')
+        ])
+    return html.Div(filename)
+
+@app.callback(
+    Output('simulation_graph', 'figure'),
+    Input('run_simulation', 'n_clicks'),
+    State('num_agents', 'value'),
+    State('num_steps', 'value'),
+    State('upload-data', 'contents')
+)
+def update_simulation(n_clicks, num_agents, num_steps, contents):
     if n_clicks > 0:
         if contents is None:
             raise PreventUpdate
 
         vertices = parse_contents(contents)
         if vertices is None:
-            return go.Figure(), html.Div([
-                'Drag and Drop or ',
-                html.A('Select Files')
-            ])
+            return go.Figure()
 
         # Create the model and run the simulation
         model = MeshModel(num_agents, vertices)
@@ -246,13 +252,9 @@ def update_simulation(n_clicks, num_agents, num_steps, contents, filename):
 
         # Plot the agent movement
         fig = MeshSpace.plot_agent_movement(model.vertices, model.space.triangles, agent_history)
-        return fig, html.Div(filename)  # Return the filename as children
+        return fig
     else:
-        return go.Figure(), html.Div([
-            'Drag and Drop or ',
-            html.A('Select Files')
-        ])
+        return go.Figure()
 
 if __name__ == '__main__':
     app.run_server(debug=True)
-
