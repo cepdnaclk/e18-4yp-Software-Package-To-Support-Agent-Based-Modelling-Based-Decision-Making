@@ -227,7 +227,7 @@ def parse_contents(contents):
 def update_filename(filename):
     if filename is None:
         return html.Div([
-            'Drag and Drop or ',
+         
             html.A('Select Files')
         ])
     return html.Div(filename)
