@@ -1,6 +1,6 @@
 import numpy as np
 import plotly.graph_objects as go
-from dash import Dash, dcc, html, Input, Output, State, dash_table
+from dash import Dash, dcc, html, Input, Output, State
 import dash_bootstrap_components as dbc
 from dash.exceptions import PreventUpdate
 from mesa import Agent, Model
@@ -34,7 +34,9 @@ class MeshSpace:
             for neighbor in tri.neighbors[i]:
                 if neighbor != -1:
                     neighbors[i].append(int(neighbor))
-           
+            if i % (total_simplices // 10) == 0:
+                progress = (i / total_simplices) * 100
+                print(f"\rProcessed {i} / {total_simplices} triangles ({progress:.2f}%)", end='', flush=True)
 
         return neighbors
 
@@ -202,15 +204,6 @@ app.layout = html.Div([
                 children=html.Div(dcc.Graph(id='simulation_graph', style={'height': '800px'}))
             )
         ], width=12)
-    ]),
-    dbc.Row([
-        dbc.Col([
-            dcc.Loading(
-                id='loading_table',
-                type='default',
-                children=dash_table.DataTable(id='agent_positions_table')
-            )
-        ], width=12)
     ])
 ])
 
@@ -223,21 +216,6 @@ def parse_contents(contents):
     except Exception as e:
         print(e)
         return None
-
-def generate_table(agent_history, vertices, triangles):
-    table_data = []
-    for step, agents in enumerate(agent_history):
-        for agent_id, triangle_id in enumerate(agents):
-            triangle = triangles[triangle_id]
-            agent_positions = vertices[triangle].mean(axis=0)
-            table_data.append({
-                'Step': step,
-                'Agent ID': agent_id,
-                'X': agent_positions[0],
-                'Y': agent_positions[1],
-                'Z': agent_positions[2]
-            })
-    return table_data
 
 @app.callback(
     Output('upload-data', 'children'),
@@ -252,16 +230,16 @@ def update_filename(filename):
     return html.Div(filename)
 
 @app.callback(
-    [Output('simulation_graph', 'figure'),
-     Output('agent_positions_table', 'data')],
+    Output('simulation_graph', 'figure'),
     Input('run_simulation', 'n_clicks'),
     State('num_agents', 'value'),
     State('num_steps', 'value'),
     State('upload-data', 'contents')
 )
 def update_simulation(n_clicks, num_agents, num_steps, contents):
+    
     if n_clicks == 0:
-        vertices = np.loadtxt("e18-4yp-Software-Package-To-Support-Agent-Based-Modelling-Based-Decision-Making\data\mesh_points.txt")
+        vertices = np.loadtxt("D:\App Projects\---FYP\e18-4yp-Software-Package-To-Support-Agent-Based-Modelling-Based-Decision-Making\data\mesh_points.txt")
 
         model = MeshModel(20, vertices)
 
@@ -272,10 +250,10 @@ def update_simulation(n_clicks, num_agents, num_steps, contents):
             agent_history.append(agent_positions)
 
         fig = MeshSpace.plot_agent_movement(model.vertices, model.space.triangles, agent_history)
-        table_data = generate_table(agent_history, model.vertices, model.space.triangles)
-        return fig, table_data
-
+        return fig
+    
     elif n_clicks > 0:
+
         if contents is not None:
             uploaded_vertices = parse_contents(contents)
             if uploaded_vertices is not None:
@@ -290,10 +268,9 @@ def update_simulation(n_clicks, num_agents, num_steps, contents):
             agent_history.append(agent_positions)
 
         fig = MeshSpace.plot_agent_movement(model.vertices, model.space.triangles, agent_history)
-        table_data = generate_table(agent_history, model.vertices, model.space.triangles)
-        return fig, table_data
+        return fig
     else:
-        return go.Figure(), []
+        return go.Figure()
 
 if __name__ == '__main__':
     app.run_server(debug=True)
