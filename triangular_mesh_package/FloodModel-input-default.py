@@ -239,7 +239,7 @@ def update_filename(filename):
 def update_simulation(n_clicks, num_agents, num_steps, contents):
     
     if n_clicks == 0:
-        vertices = np.loadtxt("data\mesh_points.txt")
+        vertices = np.loadtxt("e18-4yp-Software-Package-To-Support-Agent-Based-Modelling-Based-Decision-Making\\data\\mesh_points.txt")
 
         model = MeshModel(20, vertices)
 
@@ -255,7 +255,7 @@ def update_simulation(n_clicks, num_agents, num_steps, contents):
     elif n_clicks > 0:
 
         if contents is None:
-            vertices = np.loadtxt("data\mesh_points.txt")
+            vertices = np.loadtxt("e18-4yp-Software-Package-To-Support-Agent-Based-Modelling-Based-Decision-Making\\data\\mesh_points.txt")
         
         elif contents is not None:
             uploaded_vertices = parse_contents(contents)
